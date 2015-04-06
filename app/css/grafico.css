@@ -1,0 +1,19 @@
+.ct-chart .ct-label, .ct-chart .ct-label.ct-horizontal {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: rgba(0,0,0,.4);
+  color: rgba(0,0,0,.4);
+  font-size: 1.2rem !important;
+  text-align: left;
+}
+.ct-chart .ct-bar {
+  fill: none;
+  stroke-width: 15px;
+}
+.ct-chart .ct-series.ct-series-b .ct-bar, .ct-chart .ct-series.ct-series-b .ct-line, .ct-chart .ct-series.ct-series-b .ct-point, .ct-chart .ct-series.ct-series-b .ct-slice.ct-donut {
+  stroke: rgb(144, 237, 125);
+}
+.ct-chart .ct-series.ct-series-a .ct-bar, .ct-chart .ct-series.ct-series-a .ct-line, .ct-chart .ct-series.ct-series-a .ct-point, .ct-chart .ct-series.ct-series-a .ct-slice.ct-donut {
+  stroke: rgb(124, 181, 236);
+}

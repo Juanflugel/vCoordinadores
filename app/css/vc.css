@@ -1,0 +1,65 @@
+.radio{
+	display : none ;
+}
+.face {
+	border-radius: 30px;
+	border: 1px solid #ddd;
+	width: 60px;
+	height: 60px;
+	margin: 6px; 
+}
+.btn-green{
+	color: #333;
+}
+.btn-green.active{
+	color: #fff;
+	background-color: #47a447 !important;
+	border-color: #398439 !important;
+}
+
+.btn-red.active{
+	color: #fff;;
+	background-color: #d9534f !important;
+	border-color: #d43f3a !important;
+}
+md-sidenav {
+	width: 240px;
+	min-width: 240px;
+}
+md-sidenav.md-locked-open{
+	width: 250px;
+	min-width: 250px;
+}
+md-sidenav.md-sidenav-right{
+	width: 60%;
+	min-width: 250px;
+	max-width: 400px;
+}
+.md-button.md-default-theme {
+	border-radius: 0px;
+	padding: 10px;
+}
+
+.media {
+	border: 1px  solid #ddd;
+	border-top:none;
+}
+.carnet{
+	padding: 10px;
+	margin: 0px;
+	border-radius: 0 0 4px 4px;
+}
+.xscarnet{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.col-md-4.col-sm-4,.col-md-5.col-sm-5,.col-md-7.col-sm-8,.col-md-8.col-sm-8{
+	padding-right: 0px !important;
+}
+p{
+	margin: 0px;
+}
+.fontSize1{
+	margin-bottom:0px !important;
+	font-size: 0.7em;
+}

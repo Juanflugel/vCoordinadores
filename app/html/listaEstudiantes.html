@@ -1,0 +1,42 @@
+<div layout="row">
+    <div flex="5"></div>
+    <div flex> 
+        <md-switch flex="30" ng-model="asist" ng-click="asisToast()" aria-label="Switch 1" ng-true-value="false" ng-false-value="true"> 
+                Asistencia
+            <md-tooltip>Tomar Asistencia</md-tooltip>
+        </md-switch>
+
+        <md-list>
+            <md-item ng-repeat="estudiante in estudiantes">
+                <md-item-content>
+                    <div class="md-tile-left">
+                        <img ng-src="{{estudiante.fotoUrl}}?{{$index}}" class="face" alt="{{estudiante.Nombres}}">
+                    </div>
+                    <div class="md-tile-content">
+                        <h3>{{estudiante.Nombres}}</h3>
+                        <h4>T.I {{estudiante.NumeroDoc}}</h4>
+                    </div>
+
+                    <div class="md-tile-right">
+                        <!-- Grupo de botones para gestionar la toma de asistencias -->
+                        <div class="btn-group">
+                            <label ng-disabled="asist" class="btn btn-default btn-green" ng-class="{active: estudiante.asistencia == 'si'}">
+                                <input class="radio"  type="radio" ng-model="estudiante.asistencia"  value="si" >
+                                <i class="fa fa-check fa-lg"></i>
+                            </label>
+
+                            <label ng-disabled="asist" class="btn btn-default btn-red " ng-class="{active: estudiante.asistencia == 'no'}">
+                                <input class="radio" type="radio" ng-model="estudiante.asistencia" value="no" >
+                                <i class="fa fa-times fa-lg"></i>
+                            </label>
+                        </div> 
+                    </div>
+
+        </md-item-content>
+<md-divider ng-if="!$last"></md-divider>
+    </md-item>
+</md-list>
+    </div>
+    <div flex="5"></div>
+    
+</div>
