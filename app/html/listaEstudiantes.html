@@ -1,17 +1,17 @@
-<div layout="row" layout-sm="column">
+<div layout="row" layout-sm="column" layout-md="column">
 
-    <div flex="25" flex-order="1" flex-sm="100" layout-padding>
+    <div flex="25" flex-order="1" flex-sm="100" flex-md="100" layout-padding>
         <div layout="row" layout-wrap>
-            <md-button flex="33" flex-sm="25" ng-repeat="cur in cursos" ng-click="selectCurso(cur)">{{cur.curso}}</md-button>
+            <md-button flex="33" flex-sm="25"  flex-md="25" ng-repeat="cur in cursos" ng-click="selectCurso(cur)">{{cur.curso}}</md-button>
         </div>  
     </div>
 
     <div flex flex-order="2" layout-padding>
-        <div layout="row" layout-sm="column" layout-align="space-between center">
-            <div flex="30" flex-sm="100">
+        <div layout="row" layout-md="column" layout-sm="column" layout-align="center">
+            <div flex="30" flex-sm="100" flex-md="100">
                 <p> Lista del Curso : {{Actual}}</p>
             </div>
-            <md-input-container flex="70" flex-sm="100">
+            <md-input-container flex="70" flex-sm="100" flex-md="100">
                 <label>buscar</label>
                 <input ng-model="search">           
             </md-input-container>
