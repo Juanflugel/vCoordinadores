@@ -16,20 +16,21 @@ angular.module('VCapp',[
   	templateUrl: "html/detalle.html",
   	controller:'EstuCtrl'
   })
-  .state('Detalle.Personal', {
+   .state('Lista', {
+    url: "/ListaEstudiantes",
+    templateUrl: "html/listaEstudiantes.html",
+    controller:'EstuCtrl'
+  })
+  .state('Lista.Personal', {
   	url: "/InfoPersonal",
   	templateUrl: "html/infoPersonal.html"
   	
   })
-  .state('Detalle.Academico', {
+  .state('Lista.Academico', {
   	url: "/InfoAcademica",
   	templateUrl: "html/infoAcademica.html",
   })
-  .state('Lista', {
-  	url: "/ListaEstudiantes",
-  	templateUrl: "html/listaEstudiantes.html",
-  	controller:'EstuCtrl'
-  })
+  
   .state('Estadisticas', {
   	url: "/Estadisticas/:curso",
   	templateUrl: "html/Estadisticas.html",
@@ -89,5 +90,9 @@ angular.module('VCapp',[
 		$scope.estudiante = data[0];
 		$scope.estudiantes = data;
 	});
+  $scope.actEstudiante = function(est){
+    $scope.estudiante= est;
+  };
+
 }])
 

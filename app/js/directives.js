@@ -89,3 +89,15 @@ angular.module('VCdir',[])
 	};
 
 })
+.directive('modalDetalle', [function () {
+	return {
+		restrict: 'E',
+		templateUrl:'html/modalestudiante.html'
+	};
+}])
+.directive('detalleEstudiante', [function () {
+	return {
+		restrict: 'E',
+		templateUrl:'html/detalle.html'
+	};
+}])

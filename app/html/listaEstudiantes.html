@@ -1,21 +1,30 @@
 <div layout="row" layout-sm="column" layout-md="column">
 
     <div flex="25" flex-order="1" flex-sm="100" flex-md="100" layout-padding>
-        <div layout="row" layout-wrap>
+        <div layout="row" layout-wrap style="background-color:#f2f2f2;">
             <md-button flex="33" flex-sm="25"  flex-md="25" ng-repeat="cur in cursos" ng-click="selectCurso(cur)">{{cur.curso}}</md-button>
-        </div>  
+        </div>
+        
     </div>
 
     <div flex flex-order="2" layout-padding>
+
         <div layout="row" layout-md="column" layout-sm="column" layout-align="center">
-            <div flex="30" flex-sm="100" flex-md="100">
-                <p> Lista del Curso : {{Actual}}</p>
-            </div>
             <md-input-container flex="70" flex-sm="100" flex-md="100">
                 <label>buscar</label>
                 <input ng-model="search">           
             </md-input-container>
         </div>
+
+        <div flex="90"class="md-whiteframe-z1 md-2-line itemList">
+            <div layout="row"  layout-align="start">             
+                <p flex="35">{{Actual}}</p>               
+                <p flex="30" >Curso <i class="fa fa-filter fa-lg"></i></p>
+                <p flex="35" >Ordenar <i class="fa fa-caret-down fa-lg"></i></p>
+                
+            </div>
+        </div>
+       
         <md-list>
             <md-item ng-repeat="estudiante in estudiantes">
                 <md-item-content class="md-whiteframe-z1 md-2-line itemList">
@@ -25,7 +34,7 @@
                     </div>
 
                     <div class="md-tile-content">
-                        <h3>{{estudiante.Nombres}}</h3>
+                        <h3 data-toggle="modal" data-target="#detalleE" ng-click="actEstudiante(estudiante)">{{estudiante.Nombres}}</h3>
                         <h4>T.I {{estudiante.NumeroDoc}}</h4>
                     </div>
 
@@ -36,12 +45,13 @@
                 </md-item-content>
                 <md-divider ng-if="!$last"></md-divider>
             </md-item>
-        </md-list>
-       
-      
-    </div>
-    
+        </md-list>       
+    </div>    
 </div>
+<modal-detalle></modal-detalle>
+
+
+
 
 
 
