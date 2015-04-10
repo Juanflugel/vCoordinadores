@@ -58,7 +58,30 @@ angular.module('VCapp',[
 		$mdSidenav(menuId).toggle();
 	};
 
-	
+  $scope.cursos =[
+  {curso:'10A', jornada:'',state:'10A'},
+  {curso:'8B', jornada:'',state:'8B'},
+  {curso:'7E', jornada:'',state:'7E'},
+  {curso:'8F', jornada:'',state:'8F'},
+  {curso:'11A', jornada:'',state:'10A'},
+  {curso:'9B', jornada:'',state:'8B'},
+  {curso:'6E', jornada:'',state:'7E'},
+  {curso:'8D', jornada:'',state:'8F'},
+  {curso:'1A', jornada:'',state:'10A'},
+  {curso:'3B', jornada:'',state:'8B'},
+  {curso:'5E', jornada:'',state:'7E'},
+  {curso:'3F', jornada:'',state:'8F'},
+  {curso:'4A', jornada:'',state:'10A'},
+  {curso:'2B', jornada:'',state:'8B'},
+  {curso:'8E', jornada:'',state:'7E'},
+  {curso:'10D', jornada:'',state:'8F'}
+  ];
+
+  $scope.selectCurso = function(cur){
+    $scope.Actual = cur.curso;
+  };
+
+
 }])
 
 .controller('EstuCtrl', ['$scope','$http', function ($scope,$http) {
@@ -67,3 +90,4 @@ angular.module('VCapp',[
 		$scope.estudiantes = data;
 	});
 }])
+
