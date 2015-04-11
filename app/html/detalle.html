@@ -1,81 +1,48 @@
 <div layout="row">
-	
-<div flex>
-	<!-- vista grande, mediano y pequeño -->
-<ul class="nav nav-tabs nav-justified">
-	<li role="presentation" ui-sref-active="active"><a ui-sref="Lista.Personal" ><i class="fa fa-info-circle"></i> INFORNACION PERSONAL</a></li>
-	<li role="presentation" ui-sref-active="active"><a ui-sref="Lista.Academico"><i class="fa fa-folder-open"></i> INFORMACION ACADEMICA</a></li>
-</ul>
+	<div flex>
+		<!-- vista grande, mediano y pequeño -->
+		<ul class="nav nav-tabs nav-justified">
+			<li role="presentation" ui-sref-active="active"><a ui-sref="Lista.Personal" ><i class="fa fa-info-circle"></i> INFORNACION PERSONAL</a></li>
+			<li role="presentation" ui-sref-active="active"><a ui-sref="Lista.Academico"><i class="fa fa-folder-open"></i> INFORMACION ACADEMICA</a></li>
+		</ul>
 
-<div class="media carnet hidden-xs">
-	<div class="media-left media-middle">
-		<img class="media-object" ng-src="{{estudiante.fotoUrl}}" alt="..." style="height:160px;width:125px;border-radius:8px;">
-	</div>
-	<div class="media-body">
-		<div class="row">
-	<div class="col-md-5 col-sm-5">
-		<p>{{estudiante.Nombres}}</p>
-		<p class="fontSize1">NOMBRES</p>
-	</div>
-	<div class="col-md-5 col-sm-5">
-		<p>{{estudiante.Apellidos}}</p>
-		<p class="fontSize1">APELLIDOS</p>
-	</div>
-	<div class="col-md-2 col-sm-2">
-		<p>{{estudiante.Edad}}</p>
-		<p class="fontSize1">EDAD</p>
-	</div>
-</div>
+		<div class="media carnet hidden-xs">
+			<div class="media-left media-middle">
+				<img class="media-object" ng-src="{{estudiante.fotoUrl}}" alt="..." style="height:160px;width:125px;border-radius:8px;">
+			</div>
+			<div class="media-body">
+				<div class="row ">
+					<div class="col-md-5 col-sm-5">
+						<p>{{estudiante.Nombres}}</p>
+						<p class="fontSize1">NOMBRES</p>
+					</div>
+					<div class="col-md-5 col-sm-5">
+						<p>{{estudiante.Apellidos}}</p>
+						<p class="fontSize1">APELLIDOS</p>
+					</div>
+					<div class="col-md-2 col-sm-2">
+						<p>{{estudiante.Edad}}</p>
+						<p class="fontSize1">EDAD</p>
+					</div>
+				</div>
 
-		<div ui-view></div>
+				<div ui-view></div>
 		
-	</div>
-	<div class="row">
-		<div class="col-md-12">
-			<span><i class="fa fa-pencil-square-o"></i></span>
-		</div>    	
-	</div>
-</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<span><i class="fa fa-pencil-square-o"></i></span>
+				</div>    	
+			</div>
+		</div>
 <!-- vista grande, mediano y pequeño -->
-</div>
+<!-- solucion extra small-->
+<div ui-view class="visible-xs-block"></div>
 
 </div>
 
-
-
-
-<!-- solucion para el responsive del carnet -->
-<div class="visible-xs-block">
-	<br>
-	<div class="row list-group xscarnet">
-		<div class="col-md-2 list-group-item">
-			<strong class="fontSize1">NOMBRE:</strong> {{estudiante.Nombres}} {{estudiante.Apellidos}}
-		</div>
-		<div class="col-md-2 list-group-item" >
-			<strong class="fontSize1">NACIMIENTO :</strong> {{estudiante.Nacimiento | date:format:timezone}} ({{estudiante.Edad}})
-		</div>
-		<div class="col-md-2 list-group-item" >
-			<strong class="fontSize1">N.DOCUMENTO :</strong> {{estudiante.NumeroDoc}} (T.I)
-		</div>
-		<div class="col-md-2 list-group-item" >
-			<strong class="fontSize1">G.SANGUINEO :</strong> {{estudiante.Gsangre}}
-		</div>
-		<div class="col-md-2 list-group-item" >
-			<strong class="fontSize1">DIRECCION :</strong> {{estudiante.Direccion}} ({{estudiante.Barrio}})
-		</div>
-		<div class="col-md-2 list-group-item" >
-			<strong class="fontSize1">ACUDIENTE :</strong> {{estudiante.Acudiente}} ({{estudiante.TelAcudiente}})
-		</div>
-		<div class="col-md-2 list-group-item" >
-			<strong></strong>
-			<button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target=".modal-Evaluaciones"> 
-				<span>Calificar</span>
-			</button>&nbsp&nbsp
-			<span class="pull-right">
-				<i class="fa fa-edit fa-lg" style="color:#00D63F;" ng-click="edit(examen)" data-toggle="modal" data-target="#mymodal"></i>&nbsp&nbsp
-				<i class="fa fa-close fa-lg" style="color:#E60013;" data-toggle="modal" data-target="#modalEliminar"></i>
-			</span>
-
-		</div>
-	</div>
 </div>
+
+
+
+

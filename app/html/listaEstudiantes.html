@@ -1,26 +1,26 @@
 <div layout="row" layout-sm="column" layout-md="column">
 
-    <div flex="25" flex-order="1" flex-sm="100" flex-md="100" layout-padding>
-        <div layout="row" layout-wrap style="background-color:#f2f2f2;">
-            <md-button flex="33" flex-sm="25"  flex-md="25" ng-repeat="cur in cursos" ng-click="selectCurso(cur)">{{cur.curso}}</md-button>
+    <div flex="25" flex-order="1" flex-sm="100" flex-md="100" layout-padding ng-show="monda" class="animate-show">
+        <div layout="row" layout-wrap >
+            <md-button flex="50" flex-sm="25"  flex-md="25" ng-repeat="cur in cursos" ng-click="selectCurso(cur)">{{cur.curso}}</md-button>
         </div>
         
     </div>
 
     <div flex flex-order="2" layout-padding>
 
-        <div layout="row" layout-md="column" layout-sm="column" layout-align="center">
+        <!-- <div layout="row" layout-md="column" layout-sm="column" layout-align="center">
             <md-input-container flex="70" flex-sm="100" flex-md="100">
                 <label>buscar</label>
                 <input ng-model="search">           
             </md-input-container>
-        </div>
+        </div> -->
 
         <div flex="90"class="md-whiteframe-z1 md-2-line itemList">
             <div layout="row"  layout-align="start">             
-                <p flex="35">{{Actual}}</p>               
-                <p flex="30" >Curso <i class="fa fa-filter fa-lg"></i></p>
-                <p flex="35" >Ordenar <i class="fa fa-caret-down fa-lg"></i></p>
+                <p flex="70" flex-sm="35"><span hide-sm> Lista del Curso : </span> {{Actual}}</p>               
+                <p flex="15" flex-sm="30" >Curso <i class="fa fa-caret-down fa-lg" ng-click="monda=!monda"></i></p>
+                <p flex="15" flex-sm="35" >Ordenar <i class="fa fa-caret-down fa-lg"></i></p>
                 
             </div>
         </div>
