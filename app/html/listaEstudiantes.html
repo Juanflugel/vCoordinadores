@@ -9,22 +9,47 @@
 
     <div flex flex-order="2" layout-padding>
 
-        <!-- <div layout="row" layout-md="column" layout-sm="column" layout-align="center">
-            <md-input-container flex="70" flex-sm="100" flex-md="100">
-                <label>buscar</label>
-                <input ng-model="search">           
-            </md-input-container>
-        </div> -->
-
-        <div flex="90"class="md-whiteframe-z1 md-2-line itemList">
+<!--cabecera de control para lista de estudiantes-->
+        <div flex class="md-whiteframe-z1 md-2-line itemList">
             <div layout="row"  layout-align="start">             
-                <p flex="70" flex-sm="35"><span hide-sm> Lista del Curso : </span> {{Actual}}</p>               
-                <p flex="15" flex-sm="30" ng-click="monda=!monda">Curso <i class="fa fa-caret-down fa-lg"></i></p>
-                <p flex="15" flex-sm="35" >Ordenar <i class="fa fa-caret-down fa-lg"></i></p>
-                
+                <p flex="50" flex-sm="15" flex-md="40"><span hide-sm> Lista del Curso : </span> {{Actual}}</p>
+                <p flex ng-click="newStudent=!newStudent"><span hide-sm hide-md>Estudiante</span> <i class="fa fa-user-plus"></i></p>               
+                <p flex="15" flex-sm="30" flex-md="20"ng-click="monda=!monda">Curso <i class="fa fa-caret-down fa-lg"></i></p>
+                <p flex="15" flex-sm="35" flex-md="25">Ordenar <i class="fa fa-caret-down fa-lg"></i></p>            
             </div>
         </div>
-       
+<!--cabecera de control para lista de estudiantes-->
+<!-- formulario para nuevo estudiante-->
+<form action="" class="md-whiteframe-z1 newstudent" ng-show="newStudent">
+    <div layout="row"  layout-sm="column" layout-md="column" layout-padding>
+        <md-input-container flex="20" flex-sm="100" flex-md="100">
+            <label for="">Apellidos</label>
+            <input name="lastName" ng-model="lastName" required md-maxlength="" minlength="" placeholder="Apellidos">
+        </md-input-container>
+        <md-input-container flex="20" flex-sm="100" flex-md="100">
+            <label for="">Nombres</label>
+            <input name="Name" ng-model="Name" required md-maxlength="" minlength="">
+        </md-input-container>
+        <md-input-container flex="15" flex-sm="100" flex-md="100">
+            <label for="">N°Documento</label>
+            <input type="number"name="Doc" ng-model="Doc" required md-maxlength="" minlength="">
+        </md-input-container>
+        <md-input-container flex="10" flex-sm="100" flex-md="100">
+            <label for="">Nacimiento</label>
+            <input type="date"name="Doc" ng-model="Nacimiento" required md-maxlength="" minlength="">
+        </md-input-container>
+        <md-input-container flex="10" flex-sm="100" flex-md="100">
+            <label for="">G sanguineo</label>
+            <input type="text"name="Doc" ng-model="Sangre" required md-maxlength="" minlength="">
+        </md-input-container>
+        <md-input-container flex="20" flex-sm="100" flex-md="100">
+            <label for="">Acudiente</label>
+            <input type="text"name="Doc" ng-model="Acudiente" required md-maxlength="" minlength="">
+        </md-input-container>
+        <button type="button" class="close" ng-click="newStudent=!newStudent"><span aria-hidden="true">&times;</span></button>
+    </div>
+</form>
+<!-- formulario para nuevo estudiante-->
         <md-list>
             <md-item ng-repeat="estudiante in estudiantes">
                 <md-item-content class="md-whiteframe-z1 md-2-line itemList">
