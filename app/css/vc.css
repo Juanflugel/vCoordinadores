@@ -1,8 +1,8 @@
 .newstudent{
 	margin-bottom: 5px;
 	margin-top: 5px;
-	-webkit-transition: all  1s ease-in-out;
-	transition: all 1s ease-in-out;
+	-webkit-transition: all  0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 .newstudent.ng-hide{
 	line-height: 0;
@@ -10,8 +10,8 @@
 }
 .animate-show.ng-hide-add.ng-hide-add-active,
 .animate-show.ng-hide-remove.ng-hide-remove-active {
-	-webkit-transition: all  0.75s ease-in-out;
-	transition: all 0.75s ease-in-out;
+	-webkit-transition: all  0.6s ease-in-out;
+	transition: all 0.6s ease-in-out;
 }
 .animate-show.ng-hide {
 	max-width: 0px;
@@ -20,8 +20,8 @@
 }
 .animate-shows.ng-hide-add.ng-hide-add-active,
 .animate-shows.ng-hide-remove.ng-hide-remove-active {
-	-webkit-transition: all  0.75s ease-in-out;
-	transition: all 0.75s ease-in-out;
+	-webkit-transition: all  0.6s ease-in-out;
+	transition: all 0.6s ease-in-out;
 }
 .animate-shows.ng-hide {
 	
@@ -49,12 +49,8 @@ font-weight: bold;
 .radio{
 	display : none ;
 }
-.face {
-	border-radius: 30px;
-	border: 1px solid #ddd;
-	width: 60px;
-	height: 60px;
-	margin: 6px; 
+.md-avatar {
+	border: 1px solid #ddd;	
 }
 .btn-green{
 	color: #333;
@@ -115,4 +111,9 @@ p{
 .progress{
 	margin-bottom: 4px;
 	margin-top: 4px;
+}
+.md-button.md-default-theme {
+	padding: 0px;
+	margin: 0px;
+	min-width: 1em;
 }
