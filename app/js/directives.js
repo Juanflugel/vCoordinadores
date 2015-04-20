@@ -101,6 +101,12 @@ angular.module('VCdir',[])
 		templateUrl:'html/modalNewStudent.html'
 	};
 }])
+.directive('menuCursos', [function () {
+	return {
+		restrict: 'E',
+		templateUrl:'html/menuCursos.html'
+	};
+}])
 .directive('detalleEstudiante', [function () {
 	return {
 		restrict: 'E',

@@ -1,0 +1,20 @@
+{
+  "name": "vc",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Juanflugel/vCoordinadores",
+  "authors": [
+    "Juanflugel <juanjosegarcian1@gmail.com>"
+  ],
+  "description": "modulo de coordiandores",
+  "license": "private",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "0.9.0-rc1"
+  }
+}

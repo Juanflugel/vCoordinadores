@@ -1,0 +1,16 @@
+<div hide-sm hide-md flex="25" flex-order="1" flex-sm="100" flex-md="100" layout-padding ng-show="monda" class="animate-show">
+        <div layout="row" layout-wrap >
+            <md-button flex="50" flex-sm="25"  flex-md="25" ng-repeat="cur in cursos" ng-click="selectCurso(cur)">{{cur.curso}}</md-button>
+            <button type="button" class="close center-block" ng-click="monda=!monda" ><span aria-hidden="true">&times;</span></button>
+        </div>
+        
+    </div>
+
+<div hide-gt-md flex="25" flex-order="1" flex-sm="100" flex-md="100" layout-padding ng-show="monda" class="animate-shows">
+        <div layout="row" layout-wrap >
+            <md-button flex="50" flex-sm="25"  flex-md="25" ng-repeat="cur in cursos" ng-click="selectCurso(cur)">{{cur.curso}}</md-button>
+            <button type="button" class="close center-block" ng-click="monda=!monda" ><span aria-hidden="true">&times;</span></button>
+        </div>
+        
+</div>
+

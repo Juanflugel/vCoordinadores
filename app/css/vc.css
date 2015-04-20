@@ -14,7 +14,8 @@
 	transition: all 0.6s ease-in-out;
 }
 .animate-show.ng-hide {
-	max-width: 0px;
+	/*max-width: 0px;*/
+	width: 0px;
 	opacity: 0;
 	padding: 0px;
 }
